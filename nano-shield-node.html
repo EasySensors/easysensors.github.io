@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/styles/styles.css">
+<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+<script src="https://kit.fontawesome.com/79c31398dc.js" crossorigin="anonymous"></script>
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/EasySensorsLogo-150x150.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/EasySensorsLogo-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/EasySensorsLogo-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/EasySensorsLogo.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/img/EasySensorsLogo-32x32.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- feed -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="easySensors blog" />
+
+
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Arduino Nano radio shield with LoRa or RFM 69 radio on board. | easySensors blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Arduino Nano radio shield with LoRa or RFM 69 radio on board." />
+<meta name="author" content="easySensors team" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comes with nice enclosure." />
+<meta property="og:description" content="Comes with nice enclosure." />
+<meta property="twitter:description" content="Comes with nice enclosure." />
+<link rel="canonical" href="http://localhost:4000/nano-shield-node.html" />
+<meta property="og:url" content="http://localhost:4000/nano-shield-node.html" />
+<meta property="og:site_name" content="easySensors blog" />
+<meta property="og:image" content="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_top1.jpg?raw=true" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-22T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_top1.jpg?raw=true" />
+<meta property="twitter:title" content="Arduino Nano radio shield with LoRa or RFM 69 radio on board." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"easySensors team"},"dateModified":"2022-09-22T00:00:00+03:00","datePublished":"2022-09-22T00:00:00+03:00","description":"Comes with nice enclosure.","headline":"Arduino Nano radio shield with LoRa or RFM 69 radio on board.","image":"https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_top1.jpg?raw=true","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nano-shield-node.html"},"url":"http://localhost:4000/nano-shield-node.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <aside class="menu">
+    <div class="menu-top">
+        <div class="menu-top_logo">
+            <a href="/" >
+                <img src="/assets/img/band_logo.png" alt="Logo" onerror="this.style.display='none'">
+            </a>
+        </div>
+        <div class="menu-top_expand" onclick="toggleExpander(this)">
+            <div class="bar_top"></div>
+            <div class="bar_middle"></div>
+            <div class="bar_bottom"></div>
+        </div>
+        <ul class="navigation">
+            
+            <li>
+                <a href="/" category="home" title=""
+                
+                >
+                    <span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/ESP32_S2/" category="ESP32_S2" title="Made for ESPHome ESP32_S2 based devices"
+                
+                >
+                    <span>ESP32_S2</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/LoRa-RFM/" category="LoRa-RFM" title="LoRa and RFM69 Arduino based devices"
+                
+                    class="selected"
+                
+                >
+                    <span>LoRa-RFM</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about.html" category="about" title="about easySensors"
+                
+                >
+                    <span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu-contact">
+        
+
+        <a href="https://github.com/easysensors" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        
+    </div>
+</aside>
+
+      <main class="content-layout">
+          <div class="post">
+    <div class="content-container ">
+
+        <header>
+            <h1>Arduino Nano radio shield  with LoRa or RFM 69 radio on board.</h1>
+            
+                <figure class="post-cover">
+                    <div class="click-to-enlarge">
+                        <img
+                            click-to-enlarge
+                            
+                            class="post-cover_image webfeedsFeaturedVisual"
+                            src="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_top1.jpg?raw=true"
+                            
+                        />
+                    </div>
+                </figure>
+            
+        </header>
+        <div class="post-content">
+            <h3 id="arduino-nano-radio-shield-rfm-69-cwhcw--or-nrf24l01-radio-on-board">Arduino Nano radio shield. RFM 69 CW(HCW)  or NRF24L01+ radio on-board.</h3>
+
+<h2 id="features">Features</h2>
+<ul>
+  <li>PCB Dimensions 40x25mm</li>
+  <li>Fully compartible with standard inexpensive Arduino Nano boards.</li>
+  <li>All arduino pins are avaliable for Dupont wires.</li>
+  <li>RFM69HW and NRF24l01 footprints</li>
+  <li>SMA socket for external sub-GHz antenna for RFM 69 radio transceiver</li>
+  <li>5v to 3.3v level convertor onboard (for radio and flash)</li>
+  <li>Secure authentication - Atmel ATSHA204A Crypto Authentication Chip</li>
+  <li>External JDEC EPROM for OTA\FOTA</li>
+  <li>SD card reader onboard</li>
+</ul>
+
+<p><strong>CS and other Pins  connected to Arduino Nano:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arduino Pins</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A0</td>
+      <td>Connected to SD card reader CS</td>
+    </tr>
+    <tr>
+      <td>A3</td>
+      <td>Connected to ATSHA204A - Crypto Authentication chip</td>
+    </tr>
+    <tr>
+      <td>D8</td>
+      <td>Connected to CS FLASH chip (OTA)</td>
+    </tr>
+    <tr>
+      <td>D9</td>
+      <td>Connected to RFM 69 Reset pin</td>
+    </tr>
+    <tr>
+      <td>D10</td>
+      <td>Connected to RFM 69 CS</td>
+    </tr>
+    <tr>
+      <td>D2</td>
+      <td>RFM DIO0 interrupt</td>
+    </tr>
+    <tr>
+      <td>D11, D12, D13</td>
+      <td>SPI interface</td>
+    </tr>
+    <tr>
+      <td>A1, A2, A4, A5, D3, D4, D5, D6, D7</td>
+      <td>Free available pins</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_top2.jpg?raw=true" alt="Arduino Nano RFM sheild" /></p>
+
+<p>*** The Arduino Nano is not included</p>
+
+<p><img src="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_top1.jpg?raw=true" alt="Arduino Nano RFM sheild" />
+<img src="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_bottom1.jpg?raw=true" alt="Arduino Nano RFM sheild" />
+<img src="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_bottom2.jpg?raw=true" alt="Arduino Nano RFM sheild" />
+<img src="https://github.com/EasySensors/nanoShield/blob/master/nano_rf_shiels_bottomNRF.jpg?raw=true" alt="Arduino Nano RFM sheild" />
+<img src="https://github.com/EasySensors/nanoShield/blob/master/schem.jpg?raw=true" alt="Arduino Nano RFM sheild" /></p>
+
+<h2 id="package-content">Package Content:</h2>
+<ul>
+  <li>The radio shield board 1 pcs</li>
+</ul>
+
+<p>*** SMA antenna comes only with RFM 69 radio transceiver</p>
+
+
+        </div>
+        <div class="post-metadata">
+            <p class="discography-album_release-date">
+    date: 22 September 2022
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+          <script>
+    window.addEventListener("load", () => {
+        document.getElementsByClassName("copyrights")[0].innerHTML = 
+            `Copyrights &copy; ${new Date().getFullYear()} Site Author`;
+    });
+</script>
+<footer>
+    <p class="copyrights">
+    </p>
+</footer>
+      </main>
+      
+      <script>
+        
+(function() {
+    const interactedWithCookiesBanner = "interacted_with_cookies_banner";
+    const storageType = localStorage;
+    const cookieContainerId = "cookieContainer";
+
+    acceptAllCookieConsent = () => {
+        
+            eval("storageType.setItem('GA', true);");
+        
+            eval("storageType.setItem('SA', true);");
+        
+    }
+
+    window.cookiesAcceptDefaultFn = () => {
+        const cookieContainer = document.getElementById(cookieContainerId);
+        cookieContainer.classList.add("hidden");
+        window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+        storageType.setItem(interactedWithCookiesBanner, true);
+        acceptAllCookieConsent();
+    }
+    window.cookiesDisagreeDefaultFn = () => {
+        const cookieContainer = document.getElementById(cookieContainerId);
+        cookieContainer.classList.add("hidden");
+        window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+        storageType.setItem(interactedWithCookiesBanner, true);
+        window.location = `http://localhost:4000/cookies`;
+    }
+
+    window.addEventListener("load", () => {
+        if(storageType.getItem(interactedWithCookiesBanner) === "true" || window.location.href.indexOf("cookies") !== -1) {
+            return;
+        }
+        const cookieContainer = document.createElement("div");
+        cookieContainer.setAttribute("id", cookieContainerId);
+        cookieContainer.classList.add("hidden");
+
+        const cookieHeader = document.createElement("h2");
+        const cookieHeaderContent = document.createTextNode("Ask your users if they agree to cookies");
+
+        const cookieParagraph = document.createElement("p");
+        const cookieParagraphContent = document.createTextNode("This site might be using cookies! Customize your message or disable cookies in metaData.yml!");
+
+        const cookieButtonsContainer = document.createElement("div");
+        cookieButtonsContainer.classList.add("cookie-container--buttons");
+
+        const cookieAgreeButton = document.createElement("button");
+        const cookieButtonContent = document.createTextNode("Yes, I agree");
+        cookieAgreeButton.appendChild(cookieButtonContent);
+        eval("cookieAgreeButton.onclick = cookiesAcceptDefaultFn;");
+
+        const cookieButtonDisagree = document.createElement("button");
+        const cookieButtonDisagreeContent = document.createTextNode("No, take me to settings");
+        cookieButtonDisagree.append(cookieButtonDisagreeContent);
+        eval("cookieButtonDisagree.onclick = cookiesDisagreeDefaultFn;");
+
+        cookieHeader.append(cookieHeaderContent);
+        cookieParagraph.append(cookieParagraphContent);
+        cookieButtonsContainer.append(cookieAgreeButton, cookieButtonDisagree)
+        cookieContainer.append(cookieHeader, cookieParagraph, cookieButtonsContainer);
+        cookieContainer.classList.add("cookie-container")
+        document.body.appendChild(cookieContainer);
+        window.setTimeout(() => cookieContainer.classList.remove("hidden"));
+    });
+})();
+
+      </script>
+    
+    <script>
+      (function () {
+    window.toggleExpander = function toggleExpander(x) {
+        const menu = document.getElementsByClassName("menu")[0];
+        const navigation = document.getElementsByClassName("navigation")[0];
+        if (menu.classList.contains('expanded--visible')) {
+            menu.classList.toggle('expanded--visible');
+            navigation.addEventListener('transitionend', function(e) {
+                menu.classList.toggle("expanded");
+              }, {
+                capture: false,
+                once: true,
+                passive: false
+              });
+        } else {
+            menu.classList.toggle("expanded");
+            setTimeout(() => menu.classList.toggle('expanded--visible'), 20);
+        }
+    };
+    window.addEventListener("load", () => {
+        // #region click to enlarge images 
+        const imageWrappers = document.querySelectorAll(".click-to-enlarge");
+        imageWrappers.forEach(imageWrapper => {
+            
+            imageWrapper.addEventListener("click", () => {
+                const img = imageWrapper.getElementsByTagName("img")[0];
+                const src = img.attributes.getNamedItem("src");
+                const modal = document.createElement("div");
+                const removeModal = function() {
+                    modal.classList.add("hidden");
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                    }, 200);
+                };
+                const newImage = document.createElement("img");
+                newImage.classList.add("modal__picture-zoomed--image");
+                newImage.setAttribute("src", src.value);
+                modal.classList.add("modal__picture-zoomed", "hidden");
+                // modal.style.backgroundImage = `URL("${src.value}")`;
+                modal.addEventListener("click", removeModal);
+                modal.append(newImage);
+                document.body.append(modal);
+                document.body.addEventListener("keyup", e => {
+                    if (e.key === 'Escape') {
+                        removeModal();
+                    }
+                }, {once : true});
+                setTimeout(() => {
+                    modal.classList.remove("hidden");
+                }, 0);
+            });
+            
+        });
+        // #endregion click to enlarge images 
+        // #region embedded audio players
+        const players = document.querySelectorAll("iframe.embedded-player");
+        const getParamsByPlayerType = (src, type) => {
+            const rt = (src, height) => ({
+                src: src,
+                height: height
+            });
+            switch (type.toLocaleLowerCase()) {
+                case "soundcloud":
+                    return rt(`https://w.soundcloud.com/player/?url=${src}`, 125);
+                case "bandcamp":
+                    return rt(`https://bandcamp.com/EmbeddedPlayer/${src}`, 125);
+                case "spotify":
+                    return rt(`https://open.spotify.com/embed/track/${src}`, 80);
+                case "spotifyalbum":
+                    return rt(`https://open.spotify.com/embed/album/${src}`, 80);
+                case "spotifyplaylist":
+                    return rt(`https://open.spotify.com/embed/playlist/${src}`, 80);
+                case "spotifyepisode":
+                    return rt(`https://open.spotify.com/embed/episode/${src}`, 152);
+                case "spotifyshow":
+                    return rt(`https://open.spotify.com/embed/show/${src}`, 152);
+                case "youtube":
+                    return rt(`https://www.youtube.com/embed/${src}`, 350);
+                case "anchor.fm":
+                    return rt(`https://anchor.fm/sucias/embed/episodes/${src}`,102);
+                default:
+                    return rt(src, 125);
+            }
+        };
+        players.forEach(player => {
+            const givenSrc = player.getAttribute("givenSrc");
+            const type = player.getAttribute("type");
+            const { src, height } = getParamsByPlayerType(givenSrc, type);
+            player.setAttribute("src", src);
+            player.setAttribute("height", height);
+            player.classList.remove("hidden");
+        });
+        // #endregion embedded audio players
+    });
+})();
+    </script>
+    
+
+
+  </body>
+</html>

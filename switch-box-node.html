@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/styles/styles.css">
+<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+<script src="https://kit.fontawesome.com/79c31398dc.js" crossorigin="anonymous"></script>
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/EasySensorsLogo-150x150.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/EasySensorsLogo-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/EasySensorsLogo-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/EasySensorsLogo.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/img/EasySensorsLogo-32x32.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- feed -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="easySensors blog" />
+
+
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Low cost wireless Arduino compatible switch with LoRa or RFM 69 radio on board. | easySensors blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Low cost wireless Arduino compatible switch with LoRa or RFM 69 radio on board." />
+<meta name="author" content="easySensors team" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comes with nice enclosure." />
+<meta property="og:description" content="Comes with nice enclosure." />
+<meta property="twitter:description" content="Comes with nice enclosure." />
+<link rel="canonical" href="http://localhost:4000/switch-box-node.html" />
+<meta property="og:url" content="http://localhost:4000/switch-box-node.html" />
+<meta property="og:site_name" content="easySensors blog" />
+<meta property="og:image" content="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-22T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true" />
+<meta property="twitter:title" content="Low cost wireless Arduino compatible switch with LoRa or RFM 69 radio on board." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"easySensors team"},"dateModified":"2022-09-22T00:00:00+03:00","datePublished":"2022-09-22T00:00:00+03:00","description":"Comes with nice enclosure.","headline":"Low cost wireless Arduino compatible switch with LoRa or RFM 69 radio on board.","image":"https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/switch-box-node.html"},"url":"http://localhost:4000/switch-box-node.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <aside class="menu">
+    <div class="menu-top">
+        <div class="menu-top_logo">
+            <a href="/" >
+                <img src="/assets/img/band_logo.png" alt="Logo" onerror="this.style.display='none'">
+            </a>
+        </div>
+        <div class="menu-top_expand" onclick="toggleExpander(this)">
+            <div class="bar_top"></div>
+            <div class="bar_middle"></div>
+            <div class="bar_bottom"></div>
+        </div>
+        <ul class="navigation">
+            
+            <li>
+                <a href="/" category="home" title=""
+                
+                >
+                    <span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/ESP32_S2/" category="ESP32_S2" title="Made for ESPHome ESP32_S2 based devices"
+                
+                >
+                    <span>ESP32_S2</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/LoRa-RFM/" category="LoRa-RFM" title="LoRa and RFM69 Arduino based devices"
+                
+                    class="selected"
+                
+                >
+                    <span>LoRa-RFM</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about.html" category="about" title="about easySensors"
+                
+                >
+                    <span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu-contact">
+        
+
+        <a href="https://github.com/easysensors" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        
+    </div>
+</aside>
+
+      <main class="content-layout">
+          <div class="post">
+    <div class="content-container ">
+
+        <header>
+            <h1>Low cost wireless Arduino compatible switch with LoRa or RFM 69 radio on board.</h1>
+            
+                <figure class="post-cover">
+                    <div class="click-to-enlarge">
+                        <img
+                            click-to-enlarge
+                            
+                            class="post-cover_image webfeedsFeaturedVisual"
+                            src="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true"
+                            
+                        />
+                    </div>
+                </figure>
+            
+        </header>
+        <div class="post-content">
+            <p><img src="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox3.jpg?raw=true" alt="arduino Switch Box" />
+<img src="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox4.jpg?raw=true" alt="arduino Switch Box" />
+<img src="https://github.com/EasySensors/switchBox/blob/master/pics/screwHoles.png?raw=true" alt="arduino Switch Box" /></p>
+
+<h3 id="the-switch-box--is-a-low-cost-wireless-arduino-ide-compatible-the-atmel-atmega328p-microcontroller-with-hoperf-lora-rfm95--69-433868915-radio-on-board-best-sutable-for-home-automation-iot-could-be-used-as-switch-board-for-radio-controlling-any-diy-project-you-may-think-of-it-as-arduino-pro-mini-plus-all-the-items-in-the-picture-below">The Switch Box  is a low cost wireless Arduino IDE compatible (the Atmel ATMega328P) microcontroller with HopeRF LoRa RFM95 / 69 433/868/915 radio on-board. Best sutable for Home Automation, IOT. Could be used as switch board for radio controlling any DIY project. You may think of it as Arduino Pro Mini plus all the items in the picture below:</h3>
+
+<p><img src="https://github.com/EasySensors/switchBox/blob/master/pics/replace2.jpg?raw=true" alt="" /></p>
+
+<blockquote>
+  <p><a href="https://github.com/EasySensors/switchBox/blob/master/EasySwitchBoxMySensors.ino">GitHub code repo link</a></p>
+</blockquote>
+
+<h1 id="features--specifications">Features &amp; Specifications</h1>
+<h3 id="ide-control">IDE Control:</h3>
+<ul>
+  <li>Fully compatible with the Arduino IDE</li>
+  <li>Enumerates as an Arduino Pro Mini @ 8 MHz</li>
+  <li>Compatible with all RFM 69 \ 95 compatible open source libraries available
+    <h3 id="radio-transceivers">Radio Transceivers:</h3>
+    <p>Three transceiver options are available</p>
+  </li>
+  <li>HopeRF RFM95 LoRa® 433/868/915 MHz (long-range version)</li>
+  <li>HopeRF RFM69-HCW 433/868/915 MHz (mid-range version)</li>
+  <li>HopeRF RFM69-CW 433/868/915 MHz (low power consumption version)</li>
+  <li>Footprint available for replacing  RFM radios with NRF24L01+ 2.4 GHz radio
+    <h3 id="security">Security:</h3>
+  </li>
+  <li>On-board Atmel/Microchip ATSHA204A crypto-authentication chip provides secured handshakes
+    <h3 id="antennas">Antennas:</h3>
+    <p>Tuned PCB antenna options that are soldered to the main board</p>
+  </li>
+  <li>915 MHz - United States, Canada, Australia</li>
+  <li>868 MHz - Europe</li>
+  <li>433 MHz - Europe
+    <h3 id="interface">Interface:</h3>
+  </li>
+  <li>Long-run soft-touch buttons similar to high-quality home switches</li>
+  <li>Each button has a built-in LED for message delivery confirmation</li>
+  <li>Reset switch
+    <h3 id="power">Power:</h3>
+    <p>Utilizes two CR2032 coin cell batteries</p>
+  </li>
+  <li>On-board coin cell holders</li>
+  <li>Reverse polarity protection</li>
+  <li>High-efficiency power converter</li>
+  <li>Batteries can last as long as two years with daily use</li>
+  <li>Battery voltage sensor (via divider)</li>
+  <li>Sleep current consumption 5uA
+    <h3 id="mounting">Mounting:</h3>
+    <p>Two options are provided for mounting</p>
+  </li>
+  <li>Adhesive tape on the back</li>
+  <li>Screws through holes in the back plate</li>
+  <li>Dimensions 86*86*16 mm</li>
+</ul>
+
+<p><strong>Pin out:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arduino Pins</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pin A6</td>
+      <td>Connected to Battery voltage sensor (via divider)</td>
+    </tr>
+    <tr>
+      <td>pin A3</td>
+      <td>Connected to  ATSHA204A</td>
+    </tr>
+    <tr>
+      <td>pin D4, D8, A0</td>
+      <td>Connected to momentary switch buttons</td>
+    </tr>
+    <tr>
+      <td>pin Interrupt 1</td>
+      <td>Occurs when either button is pressed</td>
+    </tr>
+    <tr>
+      <td>pin D5, D6, D7</td>
+      <td>Connected to LED’s</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://github.com/EasySensors/switchBox/blob/master/pics/buttonsLEDPinout.png?raw=true" alt="arduino Switch Box" /></p>
+
+<p><strong>Arduino IDE Settings</strong></p>
+
+<p><img src="https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/IDEsettings.jpg?raw=true" alt="Arduino IDE Settings" /></p>
+
+<p><strong>programming FTDI adapter connection</strong></p>
+
+<p><img src="https://github.com/EasySensors/SwitchNode/blob/master/pics/FTDIvcc3.jpg?raw=true" alt="FTDI Power" /></p>
+
+<p>3.3V power option should be used.</p>
+
+<h3 id="the-arduino-example-sketches">the Arduino example sketches</h3>
+
+<p>Easy sensors API sketches. Can use both LoRa RFM95 and RFM69 radios
+EasySwitchBoxMySensors.ino  - the switchBox Sketch
+GatewaySerialMySensors.ino - the receiver serial Gateway Sketch</p>
+
+<p>Moteino API sketches. RFM69 radio used
+Moteino.ino  - the switchBox Sketch
+MoteinoGW.ino  the receiver Sketch</p>
+
+<p>RadioHead API sketches. LoRaRFM95 radio used<br />
+rf95_reliable_datagram_server.ino  the receiver Sketch
+RHswitchBox.ino  - the switchBox Sketch</p>
+
+<p>Design files link.
+https://circuitmaker.com/Projects/Details/Yury-Sviryda/EasySwitchBox</p>
+
+<h2 id="how-to-use-it-as-home-automation-iot-node-controller">How to use it as home automation (IOT) node controller</h2>
+
+<p>EasySwitchBoxMySensors.ino is the Arduino example sketch using <a href="https://www.mysensors.org/">MySensors</a> API.</p>
+
+<p>Burn the sketch into and the switchBox will became  one of the MySensors home automation network Node. 
+To create the network you need controller and at least two Nodes one as a Sensor, relay or switch Node and the other one as 
+“Gateway Serial”. I personally love <a href="https://domoticz.com/">Domoticz</a> as conroller. Please check this <a href="https://github.com/EasySensors/ButtonSizeNode/blob/master/DomoticzInstallMySensors.md">HowTo</a> to install Domoticz.</p>
+
+<p><strong>Done</strong></p>
+
+<p>The board is created by  <a href="https://www.openhardware.io/user/143/projects/Koresh">Koresh</a></p>
+
+<h3 id="prototype-history">Prototype history</h3>
+
+<p><img src="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox6.jpg?raw=true" alt="arduino Switch Box" /></p>
+
+        </div>
+        <div class="post-metadata">
+            <p class="discography-album_release-date">
+    date: 22 September 2022
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+          <script>
+    window.addEventListener("load", () => {
+        document.getElementsByClassName("copyrights")[0].innerHTML = 
+            `Copyrights &copy; ${new Date().getFullYear()} Site Author`;
+    });
+</script>
+<footer>
+    <p class="copyrights">
+    </p>
+</footer>
+      </main>
+      
+      <script>
+        
+(function() {
+    const interactedWithCookiesBanner = "interacted_with_cookies_banner";
+    const storageType = localStorage;
+    const cookieContainerId = "cookieContainer";
+
+    acceptAllCookieConsent = () => {
+        
+            eval("storageType.setItem('GA', true);");
+        
+            eval("storageType.setItem('SA', true);");
+        
+    }
+
+    window.cookiesAcceptDefaultFn = () => {
+        const cookieContainer = document.getElementById(cookieContainerId);
+        cookieContainer.classList.add("hidden");
+        window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+        storageType.setItem(interactedWithCookiesBanner, true);
+        acceptAllCookieConsent();
+    }
+    window.cookiesDisagreeDefaultFn = () => {
+        const cookieContainer = document.getElementById(cookieContainerId);
+        cookieContainer.classList.add("hidden");
+        window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+        storageType.setItem(interactedWithCookiesBanner, true);
+        window.location = `http://localhost:4000/cookies`;
+    }
+
+    window.addEventListener("load", () => {
+        if(storageType.getItem(interactedWithCookiesBanner) === "true" || window.location.href.indexOf("cookies") !== -1) {
+            return;
+        }
+        const cookieContainer = document.createElement("div");
+        cookieContainer.setAttribute("id", cookieContainerId);
+        cookieContainer.classList.add("hidden");
+
+        const cookieHeader = document.createElement("h2");
+        const cookieHeaderContent = document.createTextNode("Ask your users if they agree to cookies");
+
+        const cookieParagraph = document.createElement("p");
+        const cookieParagraphContent = document.createTextNode("This site might be using cookies! Customize your message or disable cookies in metaData.yml!");
+
+        const cookieButtonsContainer = document.createElement("div");
+        cookieButtonsContainer.classList.add("cookie-container--buttons");
+
+        const cookieAgreeButton = document.createElement("button");
+        const cookieButtonContent = document.createTextNode("Yes, I agree");
+        cookieAgreeButton.appendChild(cookieButtonContent);
+        eval("cookieAgreeButton.onclick = cookiesAcceptDefaultFn;");
+
+        const cookieButtonDisagree = document.createElement("button");
+        const cookieButtonDisagreeContent = document.createTextNode("No, take me to settings");
+        cookieButtonDisagree.append(cookieButtonDisagreeContent);
+        eval("cookieButtonDisagree.onclick = cookiesDisagreeDefaultFn;");
+
+        cookieHeader.append(cookieHeaderContent);
+        cookieParagraph.append(cookieParagraphContent);
+        cookieButtonsContainer.append(cookieAgreeButton, cookieButtonDisagree)
+        cookieContainer.append(cookieHeader, cookieParagraph, cookieButtonsContainer);
+        cookieContainer.classList.add("cookie-container")
+        document.body.appendChild(cookieContainer);
+        window.setTimeout(() => cookieContainer.classList.remove("hidden"));
+    });
+})();
+
+      </script>
+    
+    <script>
+      (function () {
+    window.toggleExpander = function toggleExpander(x) {
+        const menu = document.getElementsByClassName("menu")[0];
+        const navigation = document.getElementsByClassName("navigation")[0];
+        if (menu.classList.contains('expanded--visible')) {
+            menu.classList.toggle('expanded--visible');
+            navigation.addEventListener('transitionend', function(e) {
+                menu.classList.toggle("expanded");
+              }, {
+                capture: false,
+                once: true,
+                passive: false
+              });
+        } else {
+            menu.classList.toggle("expanded");
+            setTimeout(() => menu.classList.toggle('expanded--visible'), 20);
+        }
+    };
+    window.addEventListener("load", () => {
+        // #region click to enlarge images 
+        const imageWrappers = document.querySelectorAll(".click-to-enlarge");
+        imageWrappers.forEach(imageWrapper => {
+            
+            imageWrapper.addEventListener("click", () => {
+                const img = imageWrapper.getElementsByTagName("img")[0];
+                const src = img.attributes.getNamedItem("src");
+                const modal = document.createElement("div");
+                const removeModal = function() {
+                    modal.classList.add("hidden");
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                    }, 200);
+                };
+                const newImage = document.createElement("img");
+                newImage.classList.add("modal__picture-zoomed--image");
+                newImage.setAttribute("src", src.value);
+                modal.classList.add("modal__picture-zoomed", "hidden");
+                // modal.style.backgroundImage = `URL("${src.value}")`;
+                modal.addEventListener("click", removeModal);
+                modal.append(newImage);
+                document.body.append(modal);
+                document.body.addEventListener("keyup", e => {
+                    if (e.key === 'Escape') {
+                        removeModal();
+                    }
+                }, {once : true});
+                setTimeout(() => {
+                    modal.classList.remove("hidden");
+                }, 0);
+            });
+            
+        });
+        // #endregion click to enlarge images 
+        // #region embedded audio players
+        const players = document.querySelectorAll("iframe.embedded-player");
+        const getParamsByPlayerType = (src, type) => {
+            const rt = (src, height) => ({
+                src: src,
+                height: height
+            });
+            switch (type.toLocaleLowerCase()) {
+                case "soundcloud":
+                    return rt(`https://w.soundcloud.com/player/?url=${src}`, 125);
+                case "bandcamp":
+                    return rt(`https://bandcamp.com/EmbeddedPlayer/${src}`, 125);
+                case "spotify":
+                    return rt(`https://open.spotify.com/embed/track/${src}`, 80);
+                case "spotifyalbum":
+                    return rt(`https://open.spotify.com/embed/album/${src}`, 80);
+                case "spotifyplaylist":
+                    return rt(`https://open.spotify.com/embed/playlist/${src}`, 80);
+                case "spotifyepisode":
+                    return rt(`https://open.spotify.com/embed/episode/${src}`, 152);
+                case "spotifyshow":
+                    return rt(`https://open.spotify.com/embed/show/${src}`, 152);
+                case "youtube":
+                    return rt(`https://www.youtube.com/embed/${src}`, 350);
+                case "anchor.fm":
+                    return rt(`https://anchor.fm/sucias/embed/episodes/${src}`,102);
+                default:
+                    return rt(src, 125);
+            }
+        };
+        players.forEach(player => {
+            const givenSrc = player.getAttribute("givenSrc");
+            const type = player.getAttribute("type");
+            const { src, height } = getParamsByPlayerType(givenSrc, type);
+            player.setAttribute("src", src);
+            player.setAttribute("height", height);
+            player.classList.remove("hidden");
+        });
+        // #endregion embedded audio players
+    });
+})();
+    </script>
+    
+
+
+  </body>
+</html>
