@@ -1,0 +1,117 @@
+---
+
+layout: post
+title: Low cost wireless Arduino compatible sensor with LoRa or RFM 69 radio on board.
+
+description: Comes with nice set of sensors and  Atmel ATMega328P 8MHz the MCU. 
+
+image: https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true
+
+---
+
+<div align="right">
+        <br>
+	<a href="https://www.aliexpress.com/item/1005005118146988.html" onclick="gtag('event', 'click', {'event_category': 'External Link', 'event_label': 'BS3AliBuyPressed'});">
+	    <img src="docs/ali_buy_btn.png"  alt="Click to buy from Aliexpress">
+	</a>
+        <br>
+</div>
+
+
+## Full Version ##
+![The Button Size Node 3](https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true)
+
+## Light Version ##
+![The Button Size Node 3](https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_LITE_TOP.jpg?raw=true)
+![The Button Size Node 3](https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_LITE_BOTTOM_RADIO.jpg?raw=true)
+![The Button Size Node 3](https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_LITE_BOTTOM.jpg?raw=true)
+
+
+**The Button Size Node 3 is a low cost wireless Arduino IDE compatible (the Atmel ATMega328P 8MHz) microcontroller with LoRa RFM 95 or RFM 69 HW(CW) radio on board and few other nice additions.** 
+------------------------------------------------------------------------
+
+Best suitable for Home automation, IOT. Could be used as core board for radio controlling any DIY project. You may think of it as Arduino Pro Mini plus all the items in the picture below::
+
+![](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/replceA.jpg?raw=true)
+
+## Specification: ##
+ - 4 Layers PCB with larger ground plane improving range. 20-40% range increase according to our field tests.
+ - Dimensions 45mm x 23mm
+ - Wide operating temperature range. Tested -20 +40 Celsius
+ - Sleep current consumption 9 - 12 uA
+ - Temperature and humidity sensor Si7021 
+ - High Accuracy Temperature Sensor ±0.4 °C (max), –10 to 85 °C
+ - Precision Relative Humidity Sensor ± 3% RH (max), 0–80% RH
+ - Light sensor BH1750,  spectral responsibility is approximately human eye response. 
+ - OTA FLASH (W25X40CLNIG)
+ - Accelerometer LIS3DH (**Full version only**)
+ - Barometer BMP280 (Full **Full version only**)
+ - Magnet sensor SM351LT (**Full version only**)
+ - Authentication security - Atmel ATSHA204A Crypto Authentication Chip
+ - External JDEC EPROM
+ - Dualoptiboot bootloader. Implements over the air (OTA) firmware update ability
+ - LoRa RFM 95 or RFM 69-HW (high power version) or CW (low power consumption version) 915, 868 or 433 MHz Radio transceivers
+ - Battery voltage sensor (via divider)
+ - Supply voltage  3.5-10 Volts
+ - The Digital and Analog pins are 3.3 volts
+ - Powered by two CR2032 batteries in series with high-efficiency power converter (3.5-10V). 
+ - FTDI  header for programming
+ - LED connected to pin 6
+ - Reset button
+
+
+>[GitHub code repo link](https://github.com/EasySensors/ButtonSizeNode3/blob/master/ButtonSizeNode3Full.ino)
+
+**Pin out:** 
+
+
+Arduino Pins |Description
+------------|--------------
+Pin A0, A1 |	Available ARDUINO analog GPIO / DIGITAL GPIO
+Pin A2 | RFM69/95 reset pin
+Pin A6 |	Connected to Battery voltage sensor (via divider) 3M/470k 
+Pin A4 |	Connected to sensors i2c
+Pin A5 |	Connected to sensors i2c
+Pin A3 |	Connected to  ATSHA204A
+Pin D3, D4, D5, D6,D7, D9 |	Available ARDUINO digital GPIO
+Pin D4 | accelerometer interrupt PCINT20 connected 
+Pin D5 | magnetic sensor state\interrupt PCINT21 connected 
+Pin D6 | LED connected
+Pin D8 |	Connected to CS FLASH chip (OTA) M25P40
+Pin D2 |	Connected to RFM 69 DIO0 
+Pin D9 | Connected to RFM 69 Reset pin 
+Pin D10 |	Connected to RFM 69 CS/NSS
+Pin D11 |	MOSI
+Pin D12 |	MISO
+Pin D13 |	SCK
+Pin ANT |	RFM69 antenna
+Vcc and Bat+ | Unregulated power up to 6.5 Volts is connected before DC-DC converter
+Gnd | Ground
+
+
+**Arduino IDE Settings**
+
+![Arduino IDE Settings](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/IDEsettings.jpg?raw=true)
+
+
+**Programming FTDI adapter connection**
+
+![enter image description here](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/FTDIvcc5-3.jpg?raw=true)
+
+
+Both 3.3V and 5V power options can be used.
+
+How to use it as home automation (IOT) node controller
+------------------------------------------------------
+
+
+ButtonSizeNode.ino is the Arduino example sketch using [MySensors](https://www.mysensors.org/) API. 
+
+Connect the Node to FTDI USB adaptor, Select Pro Mini 8MHz board in Arduino IDE and upload the ButtonSizeNode.ino sketch. The skecth will create node fith fixed address in Mysensors network. 
+
+**Done**
+
+[Schematics](https://github.com/EasySensors/ButtonSizeNode3/blob/master/ButtonSizedNodeV3.pdf)
+
+
+The board is created by  [Koresh](https://www.openhardware.io/user/143/projects/Koresh)

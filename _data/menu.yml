@@ -1,0 +1,26 @@
+menu_pages:
+- title: Home
+  url: /
+  category: home
+
+- title: ESP32_S2
+  url: /ESP32_S2/
+  category: ESP32_S2
+  tooltip: Made for ESPHome ESP32_S2 based devices
+
+- title: LoRa-RFM
+  url: /LoRa-RFM/
+  category: LoRa-RFM
+  tooltip: LoRa and RFM69 Arduino based devices 
+
+- title: About
+  url: about.html
+  category: about
+  tooltip:  about easySensors
+
+menu_contacts:
+
+- faicon: fab fa-github
+  url: https://github.com/easysensors
+  target: _blank
+

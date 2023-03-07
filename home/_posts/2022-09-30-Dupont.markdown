@@ -1,0 +1,11 @@
+---
+layout: post
+title: High speed external lines like SPI and Dupont wires = not good match
+category: home
+image: assets/img/UNo-NRF.jpg
+image_alt: Post image cover
+---
+This is "standard" connection of NFR board using long Dupont wires. When external modules connected with high speed digital interfaces (SPI for example) using ordinary  Dupont wires, signal gets degraded. Use long wires only for prototyping. Try to use wires as short as you can or do not use wires at all. 
+
+![High speed external lines like SPI and Dupont wires](assets/img/Long-Wires.png)
+
