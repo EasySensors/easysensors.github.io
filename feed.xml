@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-07T05:07:23-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">easySensors blog</title><subtitle>This website will display our products valuable tips and the code </subtitle><author><name>easySensors team</name></author><entry><title type="html">EasySwitchBox Antenna Efficiency Tuning</title><link href="http://localhost:4000/SWR.html" rel="alternate" type="text/html" title="EasySwitchBox Antenna Efficiency Tuning" /><published>2022-10-26T00:00:00-07:00</published><updated>2022-10-26T00:00:00-07:00</updated><id>http://localhost:4000/SWR</id><content type="html" xml:base="http://localhost:4000/SWR.html"><![CDATA[<p>The number one challenge for compact radio-controlled device creation is PCB antenna efficiency tuning. We could use antennas with SMA connector feeder for an easy workaround, but they are bulky and hard to put inside an enclosure. Most DIY projects use wire antennas. There are lots of pros with this solution, but also many cons. Someone prefer often it is because it costs nothing, and it works in most cases! However, the cons are that it does not work as well and sometimes does not work at all. Spending hours trying to put the antenna into the device compartment is a real pain. Then, when you finally get everything properly packed inside, the device transmits nothing. Agrhh, all the signals went into the nearby ground plane or the wire starts resonating at a completely different frequency.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-20T10:39:41-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">easySensors blog</title><subtitle>This website will display our products valuable tips and the code </subtitle><author><name>easySensors team</name></author><entry><title type="html">Connecting EasySwitch box to Domoticz home automation controller.</title><link href="http://localhost:4000/SWR.html" rel="alternate" type="text/html" title="Connecting EasySwitch box to Domoticz home automation controller." /><published>2023-03-20T00:00:00-07:00</published><updated>2023-03-20T00:00:00-07:00</updated><id>http://localhost:4000/SWR</id><content type="html" xml:base="http://localhost:4000/SWR.html"><![CDATA[<p>We have a deep admiration for the RFM LoRa radio and Arduino-compatible processors from Microchip, and here are a few reasons why:</p>
+
+<ul>
+  <li>Easy to Learn: Learning to use this technology is a breeze. Thanks to the efforts of  various lib authors such as Low Power Lab, Airspyce, and MySensors, the code is lightweight and  easy to comprehend.</li>
+  <li>Free Programming IDE: The fact that the programming IDE is free is a major advantage when compared to other technologies like Zigbee. For example, if you want to use the free ZHA stack  from Texas Instruments, you need to purchase a costly IDE to compile code into binaries. With the open-source Arduino Software (IDE), you get a great tool that takes care of a lot of things  for you.</li>
+  <li>Great Libraries: We have tested many libraries, and the ones we used from MySensors have  been a staple in our projects for years. They are incredibly useful for home automation   projects.</li>
+</ul>
+
+<p>Other things worth mentioning:</p>
+<ul>
+  <li>The switchbox is powered by a coin cell battery, so it’s crucial to send the processor and radio into sleep mode to extend battery life. Otherwise, it may only last a few hours or less.</li>
+  <li>it is important to consider the device’s power source, which is coin cell batteries. As such, the values for #define MY_RFM95_TX_POWER_DBM or #define MY_RFM69_TX_POWER_DBM should be selected carefully to avoid quick battery depletion.</li>
+  <li>Air sanity is important when using radiofrequency. Please be cautious with retries and tests, and avoid taking too much airtime for sending packets, as the radiofrequency is free for all.</li>
+</ul>
+
+<p>To link the EasySwitch box with the Domoticz home automation controller, For seamless connectivity with the home automation controller, it is recommended to use a serial gateway built on the <a href="https://easysensors.github.io/nano-shield-node.html">NanoShield module</a></p>
+
+<h2 id="arduino-ide-settings-for-easyswitchbox">Arduino IDE Settings for EasySwitchBox</h2>
+<p><img src="https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/IDEsettings.jpg?raw=true" alt="" /></p>
+<h2 id="programming-ftdi-adapter-connection">programming FTDI adapter connection</h2>
+<p><img src="https://github.com/EasySensors/SwitchNode/blob/master/pics/FTDIvcc3.jpg?raw=true" alt="" /></p>
+
+<p>Mysensors is a community that provides open-source hardware and software solutions for DIY home automation and Internet of Things (IoT) projects. Their library set is specifically geared towards home automation and is designed to support both RFM69 and LoRa RFM95.
+You can easily define the radio type and frequencies by specifying them in the following lines.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#define MY_RADIO_RFM69</span>
+//#define MY_IS_RFM69HW  
+</code></pre></div></div>
+<p>Or</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#define MY_RADIO_RFM95</span>
+<span class="c">#define MY_RFM69_FREQUENCY   RFM69_915MHZ</span>
+</code></pre></div></div>
+<p>RFM 95 Modem settings :</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#define MY_RFM95_MODEM_CONFIGRUATION RFM95_BW_500KHZ | RFM95_CODING_RATE_4_5, RFM95_SPREADING_FACTOR_2048CPS | RFM95_RX_PAYLOAD_CRC_ON, RFM95_AGC_AUTO_ON // </span>
+<span class="c">#define MY_RFM95_TX_POWER_DBM (20u)</span>
+<span class="c">#define   MY_RFM95_FREQUENCY RFM95_915MHZ</span>
+</code></pre></div></div>
+<p>The code allows for sending messages to specific relays or to the home automation controller with the address of 0.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int relayNodeID[2] <span class="o">=</span> <span class="o">{</span>0, 0<span class="o">}</span><span class="p">;</span> 
+</code></pre></div></div>
+<p>The relay addresses for each button to send switch ON/OFF states can be set to any address, where 0 is the address for the SmartHome controller.
+These buttons are defined as child or sensor numbers, and a NULL value means that there is no need to report or present it to the controller.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int relayChildID[3] <span class="o">=</span> <span class="o">{</span>4, 4<span class="o">}</span><span class="p">;</span> 
+</code></pre></div></div>
+<p>NULL value means no need to report\present it to cntroller;</p>
+
+<p>The switchBox must be given a Node ID on the mySensors network, which can be done manually using</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#define MY_NODE_ID 0x43 or automatically if connected to a Home automation controller using #define MY_NODE_ID AUTO.</span>
+</code></pre></div></div>
+<p>Let’s take a look at how you can connect an EasySwitchBox and Nano Shield to the Domoticz home automation controller:</p>
+<ol>
+  <li>Burn the EasySwitchBox.ino file into the EasySwitchBox and the GatewaySerial.ino file into the Nano Shield.</li>
+  <li>To install Domoticz on a Raspberry Pi, open the terminal and run the following command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sSL</span> install.domoticz.com | <span class="nb">sudo </span>bash
+</code></pre></div>    </div>
+  </li>
+  <li>To ensure that Domoticz starts automatically, run the following commands:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>domoticz
+<span class="nb">sudo cp </span>domoticz.sh /etc/init.d
+<span class="nb">sudo chmod</span> +x /etc/init.d/domoticz.sh
+<span class="nb">sudo </span>update-rc.d domoticz.sh defaults
+</code></pre></div>    </div>
+  </li>
+  <li>Edit the startup script by running the following command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nano /etc/init.d/domoticz.sh
+</code></pre></div>    </div>
+  </li>
+  <li>Point your browser to the IP address of your Raspberry Pi, for example: http://192.168.0.10:8080.</li>
+  <li>For more details on starting Domoticz automatically when the system boots, check out this <img src="https://www.domoticz.com/wiki/Linux#Starting_Domoticz_automatically_when_the_system_boots." alt="link:" /></li>
+  <li>Add the GatewaySerial as new hardware in the Domoticz interface.
+<img src="assets/img/domoticz_setup.png" alt="EasySwitchBox Antenna Efficiency Tuning" />
+<img src="assets/img/domoticz_setup2.png" alt="EasySwitchBox Antenna Efficiency Tuning" /></li>
+</ol>
+
+<p>To locate the easySwitchBox, you will need to reset it.</p>]]></content><author><name>easySensors team</name></author><category term="home" /><summary type="html"><![CDATA[We have a deep admiration for the RFM LoRa radio and Arduino-compatible processors from Microchip, and here are a few reasons why:]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/domoticz.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/domoticz.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">EasySwitchBox Antenna Efficiency Tuning</title><link href="http://localhost:4000/SWR.html" rel="alternate" type="text/html" title="EasySwitchBox Antenna Efficiency Tuning" /><published>2022-10-26T00:00:00-07:00</published><updated>2022-10-26T00:00:00-07:00</updated><id>http://localhost:4000/SWR</id><content type="html" xml:base="http://localhost:4000/SWR.html"><![CDATA[<p>The number one challenge for compact radio-controlled device creation is PCB antenna efficiency tuning. We could use antennas with SMA connector feeder for an easy workaround, but they are bulky and hard to put inside an enclosure. Most DIY projects use wire antennas. There are lots of pros with this solution, but also many cons. Someone prefer often it is because it costs nothing, and it works in most cases! However, the cons are that it does not work as well and sometimes does not work at all. Spending hours trying to put the antenna into the device compartment is a real pain. Then, when you finally get everything properly packed inside, the device transmits nothing. Agrhh, all the signals went into the nearby ground plane or the wire starts resonating at a completely different frequency.
 Coiled antennas are like PCB antennas, requiring the counterpoise ground plane. They require efficiency tuning similar to PCB antennas. PCB antennas are more compact and easy to produce.
 <img src="assets/img/EasySwitchBox-antenna-tuning-1.jpg" alt="EasySwitchBox Antenna Efficiency Tuning" /></p>
 
@@ -782,244 +855,4 @@ To create the network you need controller and at least two Nodes one as a Sensor
 
 <h3 id="prototype-history">Prototype history</h3>
 
-<p><img src="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox6.jpg?raw=true" alt="arduino Switch Box" /></p>]]></content><author><name>easySensors team</name></author><category term="LoRa-RFM" /><summary type="html"><![CDATA[Comes with nice enclosure.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true" /><media:content medium="image" url="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Made for ESPHome project. Wireles latching relay.</title><link href="http://localhost:4000/6-way-relay.html" rel="alternate" type="text/html" title="Made for ESPHome project. Wireles latching relay." /><published>2022-09-21T00:00:00-07:00</published><updated>2022-09-21T00:00:00-07:00</updated><id>http://localhost:4000/6-way-relay</id><content type="html" xml:base="http://localhost:4000/6-way-relay.html"><![CDATA[<div align="right">
-	<br />
-	<a href="https://www.aliexpress.com/item/3256804487808973.html">
-		<img src="docs/ali_buy_btn.png" alt="Click to buy from Aliexpress" />
-	</a>
-	<br />
-</div>
-
-<h3 id="esp32-s2-module-based-6-gang-30-amps-latch-relay-in-din-rail-enclosure-best-sutable-for-secure-home-automation-iot">ESP32-S2 module based 6 Gang 30 Amps Latch Relay in DIN Rail enclosure. Best sutable for secure Home Automation, IOT.</h3>
-
-<h2 id="specification">Specification</h2>
-
-<ul>
-  <li>ESP32-S2 Matter ready chipset</li>
-  <li>Embedded IPX to SMA adapter, 3dBi antenna, any SMA Wi-Fi antenna can be used.</li>
-  <li>USB type C programming\debug connector, on board CP2102 USB-TTL converter</li>
-  <li>6 x 32 Amper Latch Relays, zero current idle consumption, suitable for any type of loads</li>
-  <li>32A terminals, 10-22AWG, 4mm2</li>
-  <li>6 x Optocoupled switch inputs</li>
-  <li>6 x Tact buttons + reset button</li>
-  <li>2 x  Dallas temperature sensor pins with 5 kilohm pull up resistors</li>
-  <li>6 x status LED’s + 2 status LED’s</li>
-  <li>High quality power supply, input voltage 85-305 Volts AC</li>
-  <li>DIN rail plastic enclosure dimensions 150x106x42mm</li>
-  <li>Board Dimensions 147x87mm</li>
-</ul>
-
-<div align="left">
-                <span><img src="docs/made-for-esphome-black-on-transparent.svg" width="225" height="123" /></span>
-</div>
-
-<blockquote>
-  <p><a href="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/ES%D0%9732_RELAYS_SCH_V1.PDF">The board schematics Pdf link</a></p>
-</blockquote>
-
-<blockquote>
-  <p><a href="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/6Gang30AmpsLatchRelay.yaml">ESPHome YAML GitHub code repo link</a></p>
-</blockquote>
-
-<h2 id="installation-or-wifi-password-setup">Installation or WiFi password setup</h2>
-
-<p>You can use the button below to install the pre-built firmware or change WiFi pasword.</p>
-<blockquote>
-  <p><a href="https://easysensors.github.io/6Gang30AmpsLatchRelayEspHomeReady">the button  is visible from the 6Gang30AmpsLatchRelayEspHomeReady web page</a></p>
-</blockquote>
-
-<esp-web-install-button manifest="./manifest.json"></esp-web-install-button>
-<script type="module" src="https://unpkg.com/esp-web-tools@8.0.3/dist/web/install-button.js?module"></script>
-
-<h3 id="installation-video">Installation video</h3>
-<video muted="" autoplay="" controls="">
-<source src="https://user-images.githubusercontent.com/18707133/182823948-121f1ef6-083b-4721-bfba-ffdc3a942aeb.mp4" type="video/mp4" />
-</video>
-
-<p>To tweak the YAML code in 6Gang30AmpsLatchRelay.yaml and burn it into the board</p>
-<ul>
-  <li>
-    <p>follow instructions in the link below and install  ESPHome
-<a href="https://esphome.io/guides/installing_esphome.html"> Installing ESPHome Manually</a></p>
-  </li>
-  <li>
-    <p>compile and upload with command-line:
- <code class="language-plaintext highlighter-rouge">esphome run 6Gang30AmpsLatchRelay.yaml</code></p>
-  </li>
-</ul>
-
-<p><img src="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/esp32_relays_din_rail_enclosure1.jpg?raw=true" alt="6 Gang 30Amps Din Rail Latch Relay" />
-<img src="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/collage.jpg?raw=true" alt="6 Gang 30Amps Din Rail Latch Relay" />
-<img src="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/esp32_relays_din_rail_enclosure4.jpg?raw=true" alt="6 Gang 30Amps Din Rail Latch Relay" />
-<img src="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/esp32_relays_din_rail_enclosure2.jpg?raw=true" alt="6 Gang 30Amps Din Rail Latch Relay" />
-<img src="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/esp32_relays_bottom.png?raw=true" alt="6 Gang 30Amps Din Rail Latch Relay" />
-<img src="https://github.com/EasySensors/6Gang30AmpsLatchRelayEspHomeReady/blob/main/docs/esp32_relays_top.png?raw=true" alt="6 Gang 30Amps Din Rail Latch Relay" /></p>
-
-<h2 id="pin-out">Pin out:</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Latch Relays</th>
-      <th>Latch Relay ESP32-S2 pin #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Latch Relay 1 ON</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 1 OFF</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 2 ON</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 2 OFF</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 3 ON</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 3 OFF</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 4 ON</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 4 OFF</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 5 ON</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 5 OFF</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 6 ON</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>Latch Relay 6 OFF</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tact buttons</th>
-      <th>ESP32-S2 pin #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Button 1</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Button 2</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>Button 3</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td>Button 4</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>Button 5</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <td>Button 6</td>
-      <td>33</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Optocoupled switch inputs</th>
-      <th>ESP32-S2 pin #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Switch 1</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <td>Switch 2</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <td>Switch 3</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <td>Switch 4</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <td>Switch 5</td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <td>Switch 6</td>
-      <td>39</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Dallas sensor ESP32-S2 pins:</th>
-      <th>ESP32-S2 pin #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Temp 1</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <td>Temp 2</td>
-      <td>41</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>i2c expander ESP32-S2 (LED’s pins):</th>
-      <th>ESP32-S2 pin #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>SDA</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <td>SCL</td>
-      <td>18</td>
-    </tr>
-  </tbody>
-</table>]]></content><author><name>easySensors team</name></author><category term="ESP32_S2" /><summary type="html"><![CDATA[With ESPHome you can create automations not only with a controller but also do some complicate logic in the MCU with.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/esp32_relays_din_rail_enclosure1.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/esp32_relays_din_rail_enclosure1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p><img src="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox6.jpg?raw=true" alt="arduino Switch Box" /></p>]]></content><author><name>easySensors team</name></author><category term="LoRa-RFM" /><summary type="html"><![CDATA[Comes with nice enclosure.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true" /><media:content medium="image" url="https://github.com/EasySensors/switchBox/blob/master/pics/easySwitchBox2_cr.jpg?raw=true" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
