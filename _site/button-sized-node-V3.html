@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/styles/styles.css">
+<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+<script src="https://kit.fontawesome.com/79c31398dc.js" crossorigin="anonymous"></script>
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/EasySensorsLogo-150x150.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/EasySensorsLogo-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/EasySensorsLogo-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/EasySensorsLogo.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/img/EasySensorsLogo-32x32.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- feed -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="easySensors blog" />
+
+
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Low cost wireless Arduino compatible sensor with LoRa or RFM 69 radio on board. | easySensors blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Low cost wireless Arduino compatible sensor with LoRa or RFM 69 radio on board." />
+<meta name="author" content="easySensors team" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comes with nice set of sensors and Atmel ATMega328P 8MHz the MCU." />
+<meta property="og:description" content="Comes with nice set of sensors and Atmel ATMega328P 8MHz the MCU." />
+<link rel="canonical" href="http://localhost:4000/button-sized-node-V3.html" />
+<meta property="og:url" content="http://localhost:4000/button-sized-node-V3.html" />
+<meta property="og:site_name" content="easySensors blog" />
+<meta property="og:image" content="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-22T00:00:00-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true" />
+<meta property="twitter:title" content="Low cost wireless Arduino compatible sensor with LoRa or RFM 69 radio on board." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"easySensors team"},"dateModified":"2022-09-22T00:00:00-07:00","datePublished":"2022-09-22T00:00:00-07:00","description":"Comes with nice set of sensors and Atmel ATMega328P 8MHz the MCU.","headline":"Low cost wireless Arduino compatible sensor with LoRa or RFM 69 radio on board.","image":"https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/button-sized-node-V3.html"},"url":"http://localhost:4000/button-sized-node-V3.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1FNJQFG0KL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1FNJQFG0KL');
+</script>
+
+
+
+  </head>
+  <body>
+    <aside class="menu">
+    <div class="menu-top">
+        <div class="menu-top_logo">
+            <a href="/" >
+                <img src="/assets/img/band_logo.png" alt="Logo" onerror="this.style.display='none'">
+            </a>
+        </div>
+        <div class="menu-top_expand" onclick="toggleExpander(this)">
+            <div class="bar_top"></div>
+            <div class="bar_middle"></div>
+            <div class="bar_bottom"></div>
+        </div>
+        <ul class="navigation">
+            
+            <li>
+                <a href="/" category="home" title=""
+                
+                >
+                    <span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/ESP32_S2/" category="ESP32_S2" title="Made for ESPHome ESP32_S2 based devices"
+                
+                >
+                    <span>ESP32_S2</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/LoRa-RFM/" category="LoRa-RFM" title="LoRa and RFM69 Arduino based devices"
+                
+                    class="selected"
+                
+                >
+                    <span>LoRa-RFM</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/stores/" category="Stores" title="Store links"
+                
+                >
+                    <span>Store links</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about.html" category="about" title="about easySensors"
+                
+                >
+                    <span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu-contact">
+        
+
+        <a href="https://github.com/easysensors" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        
+    </div>
+</aside>
+
+      <main class="content-layout">
+          <div class="post">
+    <div class="content-container ">
+
+        <header>
+            <h1>Low cost wireless Arduino compatible sensor with LoRa or RFM 69 radio on board.</h1>
+            
+                <figure class="post-cover">
+                    <div class="click-to-enlarge">
+                        <img
+                            click-to-enlarge
+                            
+                            class="post-cover_image webfeedsFeaturedVisual"
+                            src="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true"
+                            
+                        />
+                    </div>
+                </figure>
+            
+        </header>
+        <div class="post-content">
+            <div align="right">
+        <br />
+	<a href="https://www.aliexpress.com/item/1005005118146988.html" onclick="gtag('event', 'click', {'event_category': 'External Link', 'event_label': 'BS3AliBuyPressed'});">
+	    <img src="docs/ali_buy_btn.png" alt="Click to buy from Aliexpress" />
+	</a>
+        <br />
+</div>
+
+<h2 id="full-version">Full Version</h2>
+<p><img src="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_TOP.jpg?raw=true" alt="The Button Size Node 3" /></p>
+
+<h2 id="light-version">Light Version</h2>
+<p><img src="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_LITE_TOP.jpg?raw=true" alt="The Button Size Node 3" />
+<img src="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_LITE_BOTTOM_RADIO.jpg?raw=true" alt="The Button Size Node 3" />
+<img src="https://github.com/EasySensors/ButtonSizeNode3/blob/master/pics/BS3_LITE_BOTTOM.jpg?raw=true" alt="The Button Size Node 3" /></p>
+
+<h2 id="the-button-size-node-3-is-a-low-cost-wireless-arduino-ide-compatible-the-atmel-atmega328p-8mhz-microcontroller-with-lora-rfm-95-or-rfm-69-hwcw-radio-on-board-and-few-other-nice-additions"><strong>The Button Size Node 3 is a low cost wireless Arduino IDE compatible (the Atmel ATMega328P 8MHz) microcontroller with LoRa RFM 95 or RFM 69 HW(CW) radio on board and few other nice additions.</strong></h2>
+
+<p>Best suitable for Home automation, IOT. Could be used as core board for radio controlling any DIY project. You may think of it as Arduino Pro Mini plus all the items in the picture below::</p>
+
+<p><img src="https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/replceA.jpg?raw=true" alt="" /></p>
+
+<h2 id="specification">Specification:</h2>
+<ul>
+  <li>4 Layers PCB with larger ground plane improving range. 20-40% range increase according to our field tests.</li>
+  <li>Dimensions 45mm x 23mm</li>
+  <li>Wide operating temperature range. Tested -20 +40 Celsius</li>
+  <li>Sleep current consumption 9 - 12 uA</li>
+  <li>Temperature and humidity sensor Si7021</li>
+  <li>High Accuracy Temperature Sensor ±0.4 °C (max), –10 to 85 °C</li>
+  <li>Precision Relative Humidity Sensor ± 3% RH (max), 0–80% RH</li>
+  <li>Light sensor BH1750,  spectral responsibility is approximately human eye response.</li>
+  <li>OTA FLASH (W25X40CLNIG)</li>
+  <li>Accelerometer LIS3DH (<strong>Full version only</strong>)</li>
+  <li>Barometer BMP280 (Full <strong>Full version only</strong>)</li>
+  <li>Magnet sensor SM351LT (<strong>Full version only</strong>)</li>
+  <li>Authentication security - Atmel ATSHA204A Crypto Authentication Chip</li>
+  <li>External JDEC EPROM</li>
+  <li>Dualoptiboot bootloader. Implements over the air (OTA) firmware update ability</li>
+  <li>LoRa RFM 95 or RFM 69-HW (high power version) or CW (low power consumption version) 915, 868 or 433 MHz Radio transceivers</li>
+  <li>Battery voltage sensor (via divider)</li>
+  <li>Supply voltage  3.5-10 Volts</li>
+  <li>The Digital and Analog pins are 3.3 volts</li>
+  <li>Powered by two CR2032 batteries in series with high-efficiency power converter (3.5-10V).</li>
+  <li>FTDI  header for programming</li>
+  <li>LED connected to pin 6</li>
+  <li>Reset button</li>
+</ul>
+
+<blockquote>
+  <p><a href="https://github.com/EasySensors/ButtonSizeNode3/blob/master/ButtonSizeNode3Full.ino">GitHub code repo link</a></p>
+</blockquote>
+
+<p><strong>Pin out:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arduino Pins</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pin A0, A1</td>
+      <td>Available ARDUINO analog GPIO / DIGITAL GPIO</td>
+    </tr>
+    <tr>
+      <td>Pin A2</td>
+      <td>RFM69/95 reset pin</td>
+    </tr>
+    <tr>
+      <td>Pin A6</td>
+      <td>Connected to Battery voltage sensor (via divider) 3M/470k</td>
+    </tr>
+    <tr>
+      <td>Pin A4</td>
+      <td>Connected to sensors i2c</td>
+    </tr>
+    <tr>
+      <td>Pin A5</td>
+      <td>Connected to sensors i2c</td>
+    </tr>
+    <tr>
+      <td>Pin A3</td>
+      <td>Connected to  ATSHA204A</td>
+    </tr>
+    <tr>
+      <td>Pin D3, D4, D5, D6,D7, D9</td>
+      <td>Available ARDUINO digital GPIO</td>
+    </tr>
+    <tr>
+      <td>Pin D4</td>
+      <td>accelerometer interrupt PCINT20 connected</td>
+    </tr>
+    <tr>
+      <td>Pin D5</td>
+      <td>magnetic sensor state\interrupt PCINT21 connected</td>
+    </tr>
+    <tr>
+      <td>Pin D6</td>
+      <td>LED connected</td>
+    </tr>
+    <tr>
+      <td>Pin D8</td>
+      <td>Connected to CS FLASH chip (OTA) M25P40</td>
+    </tr>
+    <tr>
+      <td>Pin D2</td>
+      <td>Connected to RFM 69 DIO0</td>
+    </tr>
+    <tr>
+      <td>Pin D9</td>
+      <td>Connected to RFM 69 Reset pin</td>
+    </tr>
+    <tr>
+      <td>Pin D10</td>
+      <td>Connected to RFM 69 CS/NSS</td>
+    </tr>
+    <tr>
+      <td>Pin D11</td>
+      <td>MOSI</td>
+    </tr>
+    <tr>
+      <td>Pin D12</td>
+      <td>MISO</td>
+    </tr>
+    <tr>
+      <td>Pin D13</td>
+      <td>SCK</td>
+    </tr>
+    <tr>
+      <td>Pin ANT</td>
+      <td>RFM69 antenna</td>
+    </tr>
+    <tr>
+      <td>Vcc and Bat+</td>
+      <td>Unregulated power up to 6.5 Volts is connected before DC-DC converter</td>
+    </tr>
+    <tr>
+      <td>Gnd</td>
+      <td>Ground</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Arduino IDE Settings</strong></p>
+
+<p><img src="https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/IDEsettings.jpg?raw=true" alt="Arduino IDE Settings" /></p>
+
+<p><strong>Programming FTDI adapter connection</strong></p>
+
+<p><img src="https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/FTDIvcc5-3.jpg?raw=true" alt="enter image description here" /></p>
+
+<p>Both 3.3V and 5V power options can be used.</p>
+
+<h2 id="how-to-use-it-as-home-automation-iot-node-controller">How to use it as home automation (IOT) node controller</h2>
+
+<p>ButtonSizeNode.ino is the Arduino example sketch using <a href="https://www.mysensors.org/">MySensors</a> API.</p>
+
+<p>Connect the Node to FTDI USB adaptor, Select Pro Mini 8MHz board in Arduino IDE and upload the ButtonSizeNode.ino sketch. The skecth will create node fith fixed address in Mysensors network.</p>
+
+<p><strong>Done</strong></p>
+
+<p><a href="https://github.com/EasySensors/ButtonSizeNode3/blob/master/ButtonSizedNodeV3.pdf">Schematics</a></p>
+
+<p>The board is created by  <a href="https://www.openhardware.io/user/143/projects/Koresh">Koresh</a></p>
+
+        </div>
+        <div class="post-metadata">
+            <p class="discography-album_release-date">
+    date: 22 September 2022
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+          <script>
+    window.addEventListener("load", () => {
+        document.getElementsByClassName("copyrights")[0].innerHTML = 
+            `Copyrights &copy; ${new Date().getFullYear()} Site Author`;
+    });
+</script>
+<footer>
+    <p class="copyrights">
+    </p>
+</footer>
+      </main>
+      
+      <script>
+        
+(function() {
+    const interactedWithCookiesBanner = "interacted_with_cookies_banner";
+    const storageType = localStorage;
+    const cookieContainerId = "cookieContainer";
+
+    acceptAllCookieConsent = () => {
+        
+            eval("storageType.setItem('GA', true);");
+        
+            eval("storageType.setItem('SA', true);");
+        
+    }
+
+    window.cookiesAcceptDefaultFn = () => {
+        const cookieContainer = document.getElementById(cookieContainerId);
+        cookieContainer.classList.add("hidden");
+        window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+        storageType.setItem(interactedWithCookiesBanner, true);
+        acceptAllCookieConsent();
+    }
+    window.cookiesDisagreeDefaultFn = () => {
+        const cookieContainer = document.getElementById(cookieContainerId);
+        cookieContainer.classList.add("hidden");
+        window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+        storageType.setItem(interactedWithCookiesBanner, true);
+        window.location = `http://localhost:4000/cookies`;
+    }
+
+    window.addEventListener("load", () => {
+        if(storageType.getItem(interactedWithCookiesBanner) === "true" || window.location.href.indexOf("cookies") !== -1) {
+            return;
+        }
+        const cookieContainer = document.createElement("div");
+        cookieContainer.setAttribute("id", cookieContainerId);
+        cookieContainer.classList.add("hidden");
+
+        const cookieHeader = document.createElement("h2");
+        const cookieHeaderContent = document.createTextNode("Ask your users if they agree to cookies");
+
+        const cookieParagraph = document.createElement("p");
+        const cookieParagraphContent = document.createTextNode("This site might be using cookies! Customize your message or disable cookies in metaData.yml!");
+
+        const cookieButtonsContainer = document.createElement("div");
+        cookieButtonsContainer.classList.add("cookie-container--buttons");
+
+        const cookieAgreeButton = document.createElement("button");
+        const cookieButtonContent = document.createTextNode("Yes, I agree");
+        cookieAgreeButton.appendChild(cookieButtonContent);
+        eval("cookieAgreeButton.onclick = cookiesAcceptDefaultFn;");
+
+        const cookieButtonDisagree = document.createElement("button");
+        const cookieButtonDisagreeContent = document.createTextNode("No, take me to settings");
+        cookieButtonDisagree.append(cookieButtonDisagreeContent);
+        eval("cookieButtonDisagree.onclick = cookiesDisagreeDefaultFn;");
+
+        cookieHeader.append(cookieHeaderContent);
+        cookieParagraph.append(cookieParagraphContent);
+        cookieButtonsContainer.append(cookieAgreeButton, cookieButtonDisagree)
+        cookieContainer.append(cookieHeader, cookieParagraph, cookieButtonsContainer);
+        cookieContainer.classList.add("cookie-container")
+        document.body.appendChild(cookieContainer);
+        window.setTimeout(() => cookieContainer.classList.remove("hidden"));
+    });
+})();
+
+      </script>
+    
+    <script>
+      (function () {
+    window.toggleExpander = function toggleExpander(x) {
+        const menu = document.getElementsByClassName("menu")[0];
+        const navigation = document.getElementsByClassName("navigation")[0];
+        if (menu.classList.contains('expanded--visible')) {
+            menu.classList.toggle('expanded--visible');
+            navigation.addEventListener('transitionend', function(e) {
+                menu.classList.toggle("expanded");
+              }, {
+                capture: false,
+                once: true,
+                passive: false
+              });
+        } else {
+            menu.classList.toggle("expanded");
+            setTimeout(() => menu.classList.toggle('expanded--visible'), 20);
+        }
+    };
+    window.addEventListener("load", () => {
+        // #region click to enlarge images 
+        const imageWrappers = document.querySelectorAll(".click-to-enlarge");
+        imageWrappers.forEach(imageWrapper => {
+            
+            imageWrapper.addEventListener("click", () => {
+                const img = imageWrapper.getElementsByTagName("img")[0];
+                const src = img.attributes.getNamedItem("src");
+                const modal = document.createElement("div");
+                const removeModal = function() {
+                    modal.classList.add("hidden");
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                    }, 200);
+                };
+                const newImage = document.createElement("img");
+                newImage.classList.add("modal__picture-zoomed--image");
+                newImage.setAttribute("src", src.value);
+                modal.classList.add("modal__picture-zoomed", "hidden");
+                // modal.style.backgroundImage = `URL("${src.value}")`;
+                modal.addEventListener("click", removeModal);
+                modal.append(newImage);
+                document.body.append(modal);
+                document.body.addEventListener("keyup", e => {
+                    if (e.key === 'Escape') {
+                        removeModal();
+                    }
+                }, {once : true});
+                setTimeout(() => {
+                    modal.classList.remove("hidden");
+                }, 0);
+            });
+            
+        });
+        // #endregion click to enlarge images 
+        // #region embedded audio players
+        const players = document.querySelectorAll("iframe.embedded-player");
+        const getParamsByPlayerType = (src, type) => {
+            const rt = (src, height) => ({
+                src: src,
+                height: height
+            });
+            switch (type.toLocaleLowerCase()) {
+                case "soundcloud":
+                    return rt(`https://w.soundcloud.com/player/?url=${src}`, 125);
+                case "bandcamp":
+                    return rt(`https://bandcamp.com/EmbeddedPlayer/${src}`, 125);
+                case "spotify":
+                    return rt(`https://open.spotify.com/embed/track/${src}`, 80);
+                case "spotifyalbum":
+                    return rt(`https://open.spotify.com/embed/album/${src}`, 80);
+                case "spotifyplaylist":
+                    return rt(`https://open.spotify.com/embed/playlist/${src}`, 80);
+                case "spotifyepisode":
+                    return rt(`https://open.spotify.com/embed/episode/${src}`, 152);
+                case "spotifyshow":
+                    return rt(`https://open.spotify.com/embed/show/${src}`, 152);
+                case "youtube":
+                    return rt(`https://www.youtube.com/embed/${src}`, 350);
+                case "anchor.fm":
+                    return rt(`https://anchor.fm/sucias/embed/episodes/${src}`,102);
+                default:
+                    return rt(src, 125);
+            }
+        };
+        players.forEach(player => {
+            const givenSrc = player.getAttribute("givenSrc");
+            const type = player.getAttribute("type");
+            const { src, height } = getParamsByPlayerType(givenSrc, type);
+            player.setAttribute("src", src);
+            player.setAttribute("height", height);
+            player.classList.remove("hidden");
+        });
+        // #endregion embedded audio players
+    });
+})();
+    </script>
+    
+
+
+  </body>
+</html>
