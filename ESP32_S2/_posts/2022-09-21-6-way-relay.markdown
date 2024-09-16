@@ -49,7 +49,6 @@ image: assets/img/esp32_relays_din_rail_enclosure1.jpg
 ## Installation or WiFi password setup
 
 You can use the button below to install the pre-built firmware or change WiFi pasword.
->[the button  is visible from the 6Gang30AmpsLatchRelayEspHomeReady web page](https://easysensors.github.io/6-way-relay.html)
 
 <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
 <script type="module" src="https://unpkg.com/esp-web-tools@8.0.3/dist/web/install-button.js?module"></script>
